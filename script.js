@@ -15,14 +15,27 @@ const str="hello"
 const myArr=str.split(``);
 console.log(myArr)
 
-const str2="aabbbcc"
-const myArr2=str.split(``);
+const jmlhItems={};
+
+
+myArr.forEach (huruf=>{
+    if (jmlhItems[huruf]){
+        jmlhItems[huruf]++;
+    }else{
+        jmlhItems[huruf]=1;
+    }
+});
+console.log(jmlhItems)
+
+const str2= "aabbbcc"
+const myArr2=str2.split(``);
+const jmlhItems2 ={};
 console.log (myArr2);
-
-myArr.forEach((item, index) => {
-    console.log(item,index)
+myArr2.forEach (huruf2=>{
+    if(jmlhItems2[huruf2]){
+        jmlhItems2[huruf2]++;
+    }else{
+        jmlhItems2[huruf2]=1;
+    }
 })
-
-myArr2.forEach((item, index)=>{
-console.log(item, index)
-})
+console.log(jmlhItems2)
